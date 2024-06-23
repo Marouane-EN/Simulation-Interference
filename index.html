@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wave Interference Simulation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <h1>Paramètres</h1>
+            <div>
+                <span>Distance</span>
+                <input type="range" id="distance" class="slider" min="0.01" max="1" value="0.3" step="0.01">
+            </div>
+            <div>
+                <span>Vitesse des ondes</span>
+                <input type="range" id="speed" class="slider" min="20" max="250" value="60" step="2">
+            </div>
+            <div>
+                <input type="checkbox" id="match_ampl" name="match_ampl" class="checkbox">
+                <label for="match_ampl">verrouiller les amplitudes ensemble</label>
+            </div>
+            <div>
+                <input type="checkbox" id="match_len" name="match_len" class="checkbox">
+                <label for="match_len">verrouiller les longueurs d'onde ensemble</label>
+            </div>
+            <div>
+                <input type="checkbox" id="match_shift" name="match_shift" class="checkbox">
+                <label for="match_shift">verrouiller les déphasages ensemble</label>
+            </div>
+            <h2>Source 1</h2>
+            <div>
+                <span>Amplitude</span>
+                <input type="range" id="ampl1" class="slider" min="1" max="50" value="10" step="1">
+            </div>
+            <div>
+                <span>Longueur d'onde</span>
+                <input type="range" id="wavelen1" class="slider" min="50" max="300" value="150" step="2">
+            </div>
+            <div>
+                <span>Déphasage</span>
+                <input type="range" id="shift1" class="slider" min="0" max="6.28" value="0" step="0.2">
+            </div>
+            <h2>Source 2</h2>
+            <div>
+                <span>Amplitude</span>
+                <input type="range" id="ampl2" class="slider" min="1" max="50" value="10" step="1">
+            </div>
+            <div>
+                <span>Longueur d'onde</span>
+                <input type="range" id="wavelen2" class="slider" min="50" max="300" value="150" step="2">
+            </div>
+            <div>
+                <span>Déphasage</span>
+                <input type="range" id="shift2" class="slider" min="0" max="6.28" value="0" step="0.2">
+            </div>
+            <h2>Contrôles d'onde</h2>
+            <div class="wave-controls">
+                <button id="startWavesButton" class="wave-button">Démarrer les ondes</button>
+                <button id="stopWavesButton" class="wave-button">Arrêter les ondes</button>
+                <button id="resetWavesButton" class="wave-button">Réinitialiser les ondes</button>
+            </div>
+            <h2>Coordonnées</h2>
+            <div>
+                <span>X-coordonnée (cm)</span>
+                <input type="text" id="x-coordinate" readonly>
+            </div>
+            <div>
+                <span>Y-coordonnée (cm)</span>
+                <input type="text" id="y-coordinate" readonly>
+            </div>
+            <h2>Chronomètre</h2>
+            <div class="timer">
+                <span id="timerDisplay">00:00:00</span>
+                <button id="startTimerButton" class="timer-button">Démarrer</button>
+                <button id="stopTimerButton" class="timer-button">Arrêter</button>
+                <button id="resetTimerButton" class="timer-button">Réinitialiser</button>
+            </div>
+        </div>
+        <canvas id="ctx"></canvas>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

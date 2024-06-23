@@ -1,0 +1,111 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  background-color: rgba(73, 23, 67, 0.925);
+  font-size: 0.9rem;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#ctx {
+  width: 100%;
+  background-color: black;
+}
+
+.panel div {
+  margin: 10px 0;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 30px 0 15px 0;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+.panel span {
+  display: block;
+}
+
+.panel span, .checkbox {
+  margin-left: 10px;
+}
+
+.slider {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  display: block;
+}
+
+.timer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.timer-button {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.wave-controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.wave-button {
+  width: calc(100% - 20px);
+  margin: 5px 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  #ctx {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  #ctx {
+    height: 250px; /* Set the canvas height to 250px */
+  }
+}
