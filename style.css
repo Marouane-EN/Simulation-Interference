@@ -106,6 +106,6 @@ small {
     flex-direction: column;
   }
   #ctx {
-    height: 250px; /* Set the canvas height to 250px */
+    height: 500px; /* Set the canvas height to 250px */
   }
 }
