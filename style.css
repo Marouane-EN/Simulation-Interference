@@ -105,7 +105,12 @@ small {
   .container {
     flex-direction: column;
   }
+  .panel {
+    height: 52%; /* Set the panel height to 50% */
+  }
   #ctx {
-    height: 250px; /* Set the canvas height to 250px */
+    position: fixed;
+    bottom: 0px;
+    height: 48%; /* Set the canvas height to 50% */
   }
 }
