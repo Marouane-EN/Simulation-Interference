@@ -248,7 +248,11 @@ function updateSquareCounts(horizCount) {
 document.addEventListener("DOMContentLoaded", function() {
     canvas = document.getElementById("ctx");
     ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth * 0.75;
+    if (window.innerWidth <= 767) {
+        canvas.width = window.innerWidth * 2;
+    } else {
+        canvas.width = window.innerWidth * 0.75;
+    }
     canvas.height = window.innerHeight;
     vertSquares = horizSquares * canvas.height / canvas.width;
     source1 = new Sound();
